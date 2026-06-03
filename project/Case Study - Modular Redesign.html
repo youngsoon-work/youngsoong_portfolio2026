@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modular &amp; Block-Based Website Redesign — Youngsoon Seo</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="Home.html">Youngsoon Seo</a>
+    <nav class="nav">
+      <a href="Home.html">Work</a>
+      <a href="Info.html">Info</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap back-row" data-reveal>
+    <a class="back-link" href="Home.html"><span class="ar">&larr;</span> Back to work</a>
+  </div>
+
+  <section class="wrap cs-hero" data-reveal>
+    <p class="cs-eyebrow">SOL Edu &amp; Migration &middot; 2025&ndash;Present</p>
+    <h1>Modular &amp; Block-Based Website Redesign</h1>
+  </section>
+
+  <section class="wrap" data-reveal>
+    <dl class="cs-facts">
+      <div><dt>Client</dt><dd>SOL Edu &amp; Migration</dd></div>
+      <div><dt>Role</dt><dd>Designer</dd></div>
+      <div><dt>Year</dt><dd>2025&ndash;Present</dd></div>
+    </dl>
+
+    <div class="cs-intro">
+      <div>
+        <h2>About the project</h2>
+        <p>SOL Edu &amp; Migration is an education and migration agency based in New Zealand. The company redesigned its outdated WordPress website to improve stability and reduce technical issues on key pages such as consultation requests and application forms. The Korean and English versions have been launched, and the Chinese and Thai sites are scheduled to go live soon.</p>
+      </div>
+      <div>
+        <h2>My role</h2>
+        <p>I led the redesign by proposing a modular, block-based system instead of a traditional page-by-page rebuild. I defined reusable blocks, simplified page structures, and designed the majority of the website pages. Approximately 80% of the pages were assembled independently using WordPress admin, contributing to a 40% reduction in development costs.</p>
+      </div>
+    </div>
+  </section>
+
+  <figure class="cs-figure wide" data-reveal>
+    <image-slot id="cs-cover" shape="rounded" radius="3" placeholder="Live website screen — solnz.net" style="height:520px"></image-slot>
+    <figcaption>The relaunched SOL Edu &amp; Migration website.</figcaption>
+  </figure>
+
+  <section class="cs-section" data-reveal>
+    <h2>The problem</h2>
+    <p>The previous website relied heavily on plugins and external developers, resulting in slow performance, frequent errors, and high maintenance costs. More critically, key user flows such as consultation requests and application forms frequently failed, directly impacting user trust and business performance.</p>
+    <p>The company&rsquo;s initial plan was to migrate the existing website almost 1:1, rebuilding pages with a hard-coded structure to improve stability. While this approach could resolve immediate technical issues, it maintained the same page-based structure and did not address the fundamental problem: long-term dependency on external developers.</p>
+  </section>
+
+  <section class="cs-section" data-reveal>
+    <h2>Design strategy</h2>
+    <p>After several discussions with the CEO, I identified the key priorities for this project:</p>
+    <ul class="cs-list">
+      <li><strong style="color:var(--ink-strong);font-weight:500">Save time</strong> — quickly stabilize and relaunch the website.</li>
+      <li><strong style="color:var(--ink-strong);font-weight:500">Reduce cost</strong> — minimize reliance on hourly-based external developers.</li>
+      <li><strong style="color:var(--ink-strong);font-weight:500">Improve performance</strong> — fix errors and optimize speed.</li>
+      <li><strong style="color:var(--ink-strong);font-weight:500">Enable internal management</strong> — reduce dependency on external support.</li>
+    </ul>
+    <div class="hmw">
+      <span class="q">How might we</span>
+      Create a scalable, self-sustaining website that can be managed internally while improving performance and reliability?
+    </div>
+    <p>Instead of rebuilding pages individually, I proposed shifting from a page-based approach to a modular, block-based system. By designing reusable content blocks — such as 1-column and 2-column layouts that can flexibly incorporate images, titles, and tables — pages could be assembled without additional development.</p>
+    <p>This approach reframed the website from a collection of fixed pages into a system of reusable components, enabling internal teams to create and manage content independently.</p>
+  </section>
+
+  <figure class="cs-figure" data-reveal>
+    <image-slot id="cs-blocks" shape="rounded" radius="3" placeholder="Diagram — page-by-page build vs. reusable block system" style="height:460px"></image-slot>
+    <figcaption>From a page-by-page build to a reusable block system.</figcaption>
+  </figure>
+
+  <section class="cs-section" data-reveal>
+    <p>This shift fundamentally changed the scope of the project from a simple redesign to a sustainable system:</p>
+    <ul class="cs-list">
+      <li><strong style="color:var(--ink-strong);font-weight:500">Reduced developer dependency</strong> — internal staff could assemble pages without relying on external developers.</li>
+      <li><strong style="color:var(--ink-strong);font-weight:500">Faster content updates</strong> — new pages and updates could be published quickly without development cycles.</li>
+      <li><strong style="color:var(--ink-strong);font-weight:500">Lower long-term costs</strong> — instead of rebuilding ~20 pages individually, only a few modular templates were developed and scaled internally.</li>
+      <li><strong style="color:var(--ink-strong);font-weight:500">Fit for a small team</strong> — the solution aligned with the company&rsquo;s reality: no dedicated IT team.</li>
+    </ul>
+  </section>
+
+  <section class="cs-section" data-reveal>
+    <h2>Process</h2>
+    <p>Instead of a linear redesign, I focused on restructuring the website into a scalable system.</p>
+    <ol class="cs-steps">
+      <li><span class="num"></span><div><p class="st-title">Audit &amp; simplify</p><p class="st-desc">Reviewed all existing pages, identified recurring patterns, and categorized content into clear page types to reduce complexity.</p></div></li>
+      <li><span class="num"></span><div><p class="st-title">Define the modular system</p><p class="st-desc">Designed reusable blocks — hero sections, 2-column layouts, repeated content, and forms — to standardize page structures.</p></div></li>
+      <li><span class="num"></span><div><p class="st-title">Template collaboration</p><p class="st-desc">Worked with an external developer to build 2&ndash;3 sample templates that established the foundation of the system.</p></div></li>
+      <li><span class="num"></span><div><p class="st-title">Internal assembly</p><p class="st-desc">Redesigned all website pages and assembled roughly 80% of them independently using reusable blocks, significantly reducing developer involvement.</p></div></li>
+      <li><span class="num"></span><div><p class="st-title">Ongoing expansion</p><p class="st-desc">Launched the Korean and English versions, and extended the same modular system to additional languages, including Thai and Chinese.</p></div></li>
+    </ol>
+  </section>
+
+  <figure class="cs-figure" data-reveal>
+    <image-slot id="cs-blocks2" shape="rounded" radius="3" placeholder="Reusable block components in WordPress" style="height:400px"></image-slot>
+    <figcaption>A set of reusable blocks that internal teams compose into pages.</figcaption>
+  </figure>
+
+  <section class="cs-section" data-reveal>
+    <h2>Knowledge base enhancement</h2>
+    <h3>Challenges</h3>
+    <ul class="cs-list">
+      <li>Long, hard-to-navigate PDFs.</li>
+      <li>Information spread across multiple documents.</li>
+      <li>A manual process to locate and share files.</li>
+      <li>Content updates required editing and re-uploading PDFs.</li>
+    </ul>
+    <h3 style="margin-top:36px">Solution</h3>
+    <ul class="cs-list">
+      <li>Integrated a mini knowledge base into the website.</li>
+      <li>Organized content into clear categories and topics.</li>
+      <li>Added &ldquo;Download&rdquo; and &ldquo;Copy Link&rdquo; features.</li>
+      <li>Enabled direct content updates without relying on PDFs.</li>
+    </ul>
+    <p style="margin-top:18px">&rarr;&nbsp; Improved both client access and internal workflow efficiency.</p>
+  </section>
+
+  <figure class="cs-figure" data-reveal>
+    <image-slot id="cs-kb" shape="rounded" radius="3" placeholder="Knowledge base interface" style="height:420px"></image-slot>
+  </figure>
+
+  <section class="cs-section" data-reveal>
+    <h2>Impact</h2>
+    <div class="metrics">
+      <div class="metric"><div class="fig">40%</div><div class="cap">Lower development cost</div></div>
+      <div class="metric"><div class="fig">~80%</div><div class="cap">Pages managed internally</div></div>
+      <div class="metric"><div class="fig">22 &rarr; 12</div><div class="cap">Developer-built pages</div></div>
+    </div>
+    <p><strong style="color:var(--ink-strong);font-weight:500">Cost reduction.</strong> The initial quote covered 22 individually built pages. By grouping similar pages and introducing a modular system, developer-built pages were reduced to 12, significantly lowering costs.</p>
+    <p><strong style="color:var(--ink-strong);font-weight:500">Faster delivery.</strong> While the developer focused on templates, backend, and form development, I assembled the remaining pages, allowing parallel work and faster overall delivery.</p>
+    <p><strong style="color:var(--ink-strong);font-weight:500">Operational independence.</strong> Internal staff can now create and manage ~80% of pages without developer support, with faster updates enabled by reusable blocks.</p>
+    <p><strong style="color:var(--ink-strong);font-weight:500">Improved UX &amp; consistency.</strong> The modular system simplified the design and aligned it with a more professional, trustworthy brand. Standardized blocks ensure consistent layouts and interactions across pages.</p>
+  </section>
+
+  <figure class="cs-figure" data-reveal>
+    <image-slot id="cs-final" shape="rounded" radius="3" placeholder="Final pages assembled from blocks" style="height:420px"></image-slot>
+  </figure>
+
+  <div class="cs-divider" data-reveal></div>
+
+  <section class="cs-section" data-reveal>
+    <h2>Reflection</h2>
+    <p>Through this project, I learned to:</p>
+    <ul class="cs-list">
+      <li>Identify root problems beyond surface-level issues, including operational dependency.</li>
+      <li>Think in system-level solutions rather than isolated page improvements.</li>
+      <li>Balance business constraints with user needs in a resource-limited environment.</li>
+    </ul>
+    <p>This experience reinforced that product design is not just about interfaces, but about creating scalable, maintainable systems aligned with real business needs.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="rule"></div>
+  <div class="wrap footer-inner" data-reveal style="height: 280px">
+    <p class="connect">Let&rsquo;s connect<br><a href="mailto:youngsoon.work@gmail.com" style="font-weight: 600">youngsoon.work@gmail.com</a></p>
+    <div class="footer-meta">
+      <span class="copy">&copy; 2026 Youngsoon Seo</span>
+      <nav class="footer-links">
+        <a href="Home.html">Home</a>
+        <a href="uploads/Youngsoon-v3.0.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="https://www.linkedin.com/in/youngsoon-seo/" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="image-slot.js"></script>
+<script src="reveal.js"></script>
+</body>
+</html>

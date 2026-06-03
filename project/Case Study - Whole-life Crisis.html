@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visualizing Uncertainty: The Whole-Life Crisis — Youngsoon Seo</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="Home.html">Youngsoon Seo</a>
+    <nav class="nav">
+      <a href="Home.html">Work</a>
+      <a href="Info.html">Info</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap back-row" data-reveal>
+    <a class="back-link" href="Home.html"><span class="ar">&larr;</span> Back to work</a>
+  </div>
+
+  <section class="wrap cs-hero" data-reveal data-screen-label="Whole-Life Crisis">
+    <p class="cs-eyebrow">Master&rsquo;s Project &middot; 2025</p>
+    <h1>Visualizing Uncertainty: The Whole-Life Crisis</h1>
+  </section>
+
+  <section class="wrap" data-reveal>
+    <dl class="cs-facts">
+      <div><dt>Type</dt><dd>Master&rsquo;s Project</dd></div>
+      <div><dt>Role</dt><dd>Designer</dd></div>
+      <div><dt>Year</dt><dd>2025</dd></div>
+    </dl>
+
+    <div class="cs-intro">
+      <div>
+        <h2>About the project</h2>
+        <p>Life crises are universal, yet often framed as isolated moments such as &ldquo;quarter-life&rdquo; or &ldquo;mid-life&rdquo; crises. This project questions that perspective, exploring uncertainty as something we continuously navigate rather than experience at a specific stage. It reframes life crises as a shared human experience that connects people across age and background.</p>
+      </div>
+      <div>
+        <h2>My role</h2>
+        <p>I conducted research, developed the concept, and designed the UX and prototype. My focus was on translating emotional and qualitative insights into a visual system that communicates life experiences. I created a life graph system to represent uncertainty and emotional change, and designed an interactive prototype for reflection and comparison.</p>
+      </div>
+    </div>
+  </section>
+
+  <figure class="cs-figure wide" data-reveal>
+    <image-slot id="lc-cover" src="images/lc/graph-a.png" fit="cover" shape="rounded" radius="3" placeholder="Life-graph system overview" style="height:480px;background:#fbf4e6"></image-slot>
+    <figcaption>Mapping a lifetime of uncertainty as a single, comparable graph.</figcaption>
+  </figure>
+
+  <section class="cs-section" data-reveal>
+    <h2>Understanding how people experience life crises</h2>
+    <p class="cs-lead">This project began with a personal question: <em>Why does life still feel uncertain in my 30s?</em></p>
+    <p>I explored existing concepts such as the quarter-life crisis and mid-life crisis, which describe specific life stages marked by uncertainty and reflection. However, I wanted to understand whether uncertainty is truly limited to these stages.</p>
+    <h3 style="margin-top:36px">To investigate this, I conducted</h3>
+    <ul class="cs-list">
+      <li>Literature research on life transitions and crisis stages.</li>
+      <li>Semi-structured interviews with young adults (20s&ndash;30s) and older adults (40s&ndash;60s) across different cultural backgrounds.</li>
+    </ul>
+    <h3 style="margin-top:36px">From the interviews, I identified recurring themes</h3>
+    <ul class="cs-list">
+      <li>People describe life as &ldquo;in-between,&rdquo; &ldquo;uncertain,&rdquo; and &ldquo;not linear.&rdquo;</li>
+      <li>Major life changes often come unexpectedly.</li>
+      <li>Uncertainty exists across all life stages, not just early adulthood.</li>
+    </ul>
+  </section>
+
+  <section class="cs-section tight" data-reveal>
+    <div class="cs-quotes">
+      <blockquote class="cs-quote warm">
+        <p>&ldquo;Nobody tells you that crises don&rsquo;t stop. You solve one, and then life hands you another.&rdquo;</p>
+        <cite>54 &middot; South Korean &middot; Director</cite>
+      </blockquote>
+      <blockquote class="cs-quote warm">
+        <p>&ldquo;I don&rsquo;t know what I&rsquo;m doing. Everyone around me seems to have a plan, and I just feel foggy.&rdquo;</p>
+        <cite>26 &middot; South African &middot; Tutor</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="cs-section" data-reveal>
+    <h2>Problem framing: the Whole-Life Crisis</h2>
+    <p>Through research and interviews, I found that people across different ages described similar patterns of uncertainty, yet often believed their struggles were unique. This led me to reframe the problem as a <strong>Whole-Life Crisis</strong>.</p>
+    <h3 style="margin-top:32px">Key findings</h3>
+    <ul class="cs-list">
+      <li>Life is not defined by one or two crises, but a continuous process of navigating uncertainty.</li>
+      <li>People often feel isolated, even though these experiences are universal.</li>
+    </ul>
+    <div class="hmw">
+      <span class="q">Design opportunity</span>
+      Create a way for people to visualize their life journeys so that uncertainty becomes visible, relatable, and easier to reflect on.
+    </div>
+    <div class="cs-progression">
+      <span class="cs-chip">Quarter-Life Crisis</span>
+      <span class="sep">&rarr;</span>
+      <span class="cs-chip">Mid-Life Crisis</span>
+      <span class="sep">&rarr;</span>
+      <span class="cs-chip active">The Whole-Life Crisis</span>
+    </div>
+  </section>
+
+  <section class="cs-section" data-reveal>
+    <h2>Design decision: why a graph?</h2>
+    <p>During interviews, participants naturally described their lives using phrases like &ldquo;ups and downs,&rdquo; &ldquo;turning points,&rdquo; and &ldquo;highs and lows.&rdquo; This revealed that people already perceive life as a trajectory over time.</p>
+    <p>Based on this observation, I explored ways to represent life experiences visually and chose a graph structure because it clearly communicates change, patterns, and turning points across time. A graph also enables comparison between different life journeys, making individual experiences more relatable.</p>
+    <p>However, representing life as a single line was not sufficient to capture its complexity. I needed a way to reflect both emotional and contextual depth within the same system.</p>
+  </section>
+
+  <section class="cs-section" data-reveal>
+    <h2>Creating the Life Graph</h2>
+    <p>To capture this complexity, I developed a multi-dimensional Life Graph system using four key metrics:</p>
+    <div class="cs-cards">
+      <div class="cs-card"><p class="ct">Certainty</p><p class="cd">How confident or uncertain they felt &middot; scale &minus;10 to 10</p></div>
+      <div class="cs-card"><p class="ct">Intensity</p><p class="cd">Intensity of major turning points &middot; scale 1 to 10</p></div>
+      <div class="cs-card"><p class="ct">Context</p><p class="cd">Personal context behind each moment &middot; free text</p></div>
+      <div class="cs-card"><p class="ct">Emotion</p><p class="cd">How someone felt at each stage &middot; qualitative</p></div>
+    </div>
+  </section>
+
+  <section class="cs-section" data-reveal>
+    <p>This combination allowed the graph to represent both patterns over time and individual narratives, balancing analytical clarity with emotional meaning. To test whether this system could meaningfully represent real experiences, I applied it to three interview participants and my own life journey &mdash; resulting in four life graphs that let me compare different paths and evaluate whether the structure could capture diverse experiences.</p>
+  </section>
+
+  <figure class="cs-figure" data-reveal>
+    <image-slot id="lc-graphs" src="images/lc/graph-b.png" fit="cover" shape="rounded" radius="3" placeholder="Four life graphs compared" style="height:380px;background:#fbf4e6"></image-slot>
+    <figcaption>Each graph maps certainty, intensity, emotion, and context across a lifetime.</figcaption>
+  </figure>
+
+  <section class="cs-section" data-reveal>
+    <h2>User feedback: from visualization to insight</h2>
+    <p>After creating the graphs, I revisited participants and asked them to reflect on both their own graphs and others&rsquo;. Many reported that:</p>
+    <ul class="cs-list">
+      <li>Visualizing their life helped them better understand past emotions and decisions.</li>
+      <li>Seeing their experiences mapped over time gave clarity to previously confusing periods.</li>
+      <li>Comparing with others revealed that uncertainty and crises are universal.</li>
+    </ul>
+    <p>What started as a visualization exercise became a reflective experience.</p>
+    <div class="hmw">
+      <span class="q">Key insight</span>
+      When life experiences are visualized, people can process them more clearly and recognize patterns that were previously invisible.
+    </div>
+  </section>
+
+  <section class="cs-section tight" data-reveal>
+    <div class="cs-quotes">
+      <blockquote class="cs-quote warm"><p>&ldquo;I&rsquo;m not the only one who struggles.&rdquo;</p></blockquote>
+      <blockquote class="cs-quote warm"><p>&ldquo;My life is full of ups and downs &mdash; sometimes it rises, and then suddenly falls.&rdquo;</p></blockquote>
+      <blockquote class="cs-quote warm"><p>&ldquo;Now I can see why I was so confused and stressed. It makes more sense.&rdquo;</p></blockquote>
+      <blockquote class="cs-quote warm"><p>&ldquo;Each crisis teaches me to let go a little more, to recognize what I can&rsquo;t control.&rdquo;</p></blockquote>
+    </div>
+  </section>
+
+  <section class="cs-section" data-reveal>
+    <h2>Product experience: reflecting and exploring life journeys</h2>
+    <p class="cs-lead">Based on these insights, I expanded the Life Graph from a visualization tool into a product experience focused on reflection and connection.</p>
+    <p>The platform is designed around two core flows:</p>
+    <div class="cs-cards" style="margin-top:20px">
+      <div class="cs-card"><p class="ct">Reflect</p><p class="cd">Users answer guided prompts about life events, uncertainty, and turning points. Their responses are structured and visualized as a Life Graph, enabling personal reflection.</p></div>
+      <div class="cs-card"><p class="ct">Explore</p><p class="cd">Users browse other people&rsquo;s life graphs by age, theme, or life event. By comparing journeys, users recognize shared patterns of uncertainty and feel less isolated.</p></div>
+    </div>
+    <p style="margin-top:24px">By combining self-reflection and comparison, the experience transforms individual crises into a shared understanding &mdash; helping users see that their journey is not unique, but part of a broader human experience.</p>
+  </section>
+
+  <figure class="cs-figure" data-reveal style="max-width:440px">
+    <image-slot id="lc-reflect" src="images/lc/reflect.png" fit="contain" shape="rounded" radius="3" placeholder="Reflect flow — a generated Life Graph" style="height:300px;background:#fffdf9"></image-slot>
+    <figcaption>Reflect: guided prompts build a personal Life Graph, tagged by theme.</figcaption>
+  </figure>
+
+  <figure class="cs-scroll wide" data-reveal>
+    <div class="vp"><img src="images/lc/explore.png" alt="Explore — browsing life graphs by age, theme, and life event"></div>
+    <figcaption>Explore: browse and compare journeys across age and theme. <span class="hint">Scroll to view the full page.</span></figcaption>
+  </figure>
+
+  <div class="cs-divider" data-reveal></div>
+
+  <section class="cs-section" data-reveal>
+    <h2>Reflection</h2>
+    <p>This project demonstrates how UX design can transform abstract emotional experiences into a structured visual system. It strengthened my ability to translate qualitative research into design frameworks, and to design systems that support reflection, empathy, and shared understanding.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="rule"></div>
+  <div class="wrap footer-inner" data-reveal style="height: 280px">
+    <p class="connect">Let&rsquo;s connect<br><a href="mailto:youngsoon.work@gmail.com" style="font-weight: 600">youngsoon.work@gmail.com</a></p>
+    <div class="footer-meta">
+      <span class="copy">&copy; 2026 Youngsoon Seo</span>
+      <nav class="footer-links">
+        <a href="Home.html">Home</a>
+        <a href="uploads/Youngsoon-v3.0.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="https://www.linkedin.com/in/youngsoon-seo/" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="image-slot.js"></script>
+<script src="reveal.js"></script>
+</body>
+</html>
