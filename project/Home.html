@@ -6,7 +6,6 @@
 <title>Youngsoon Seo — Designer</title>
 <link rel="stylesheet" href="styles.css">
 <style>
-  /* ---------- hero ---------- */
   .hero { padding-block: 86px; }
   .hero p {
     margin: 0;
@@ -17,8 +16,6 @@
     color: var(--ink-strong);
     text-wrap: pretty;
   }
-
-  /* ---------- selected work header ---------- */
   .work-head { padding-top: 1px; }
   .work-head .rule { height: 1px; background: var(--line); }
   .work-head h2 {
@@ -28,8 +25,6 @@
     letter-spacing: 0px;
     color: var(--ink);
   }
-
-  /* ---------- work list ---------- */
   .work { padding-top: 16px; }
   .work-item {
     display: grid;
@@ -72,40 +67,118 @@
     font-size: 16px;
     color: var(--ink);
     width: fit-content;
+    position: relative;
   }
   .case-link .arrow { transition: transform .3s cubic-bezier(.2,.7,.2,1); }
-  .case-link::after {
-    content: "";
-    position: absolute;
-  }
-  .case-link { position: relative; }
+  .case-link::after { content: ""; position: absolute; }
   .case-link span.label { border-bottom: 1px solid transparent; transition: border-color .25s; padding-bottom: 1px; }
   .case-link:hover span.label { border-color: var(--ink); }
   .case-link:hover .arrow { transform: translateX(5px); }
   .case-link.muted { color: var(--gray-soft); cursor: default; }
   .case-link.muted:hover span.label { border-color: transparent; }
   .case-link.muted:hover .arrow { transform: none; }
-
   .work-visual {
     position: relative;
     overflow: hidden;
     border-radius: 3px;
   }
-  .work-visual image-slot {
+  .work-visual image-slot,
+  .work-visual video {
     width: 100%;
     height: 440px;
+    object-fit: cover;
+    display: block;
     transition: transform .6s cubic-bezier(.2,.7,.2,1);
   }
   .work-item a.block-link:hover ~ .work-visual image-slot,
-  .work-visual:hover image-slot { transform: scale(1.012); }
-
+  .work-item a.block-link:hover ~ .work-visual video,
+  .work-visual:hover image-slot,
+  .work-visual:hover video { transform: scale(1.012); }
   @media (max-width: 900px) {
     .work-item { grid-template-columns: 1fr; gap: 28px; }
     .work-copy { order: 1; }
     .work-visual { order: 0; }
-    .work-visual image-slot { height: clamp(220px, 56vw, 420px); }
+    .work-visual image-slot,
+    .work-visual video { height: clamp(220px, 56vw, 420px); }
     .work-desc, .work-copy { max-width: none; }
     .case-link { margin-top: 28px; }
+  }
+  .cover {
+    position: relative;
+    height: 440px;
+    overflow: hidden;
+    transition: transform .6s cubic-bezier(.2,.7,.2,1);
+  }
+  .work-item a.block-link:hover ~ .work-visual .cover,
+  .work-visual:hover .cover { transform: scale(1.012); }
+  .cover-fill {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    box-shadow: inset 0 0 0 1px rgba(20,24,33,0.05);
+    background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(0,0,0,0.045) 82%);
+  }
+  .cover-sol      { background: #efece4; }
+  .cover-crisis   { background: #fdf6e3; }
+  .cover-cyber    { background: #e7eef9; }
+  .cover-endpoint { background: #f4f5f7; }
+  .cover-sol .cover-fill { object-position: 50% 40%; transform: scale(1.04); }
+  .cover-crisis .cover-fill { object-position: 56% 60%; transform: scale(1.06); }
+  .cover-cyber .brow {
+    position: absolute;
+    left: 9%; top: 21%; width: 88%;
+    border-radius: 9px;
+    overflow: hidden;
+    background: #fff;
+    transform: rotate(-3deg);
+    transform-origin: center;
+    box-shadow: 0 34px 64px -30px rgba(20,44,92,0.5), 0 3px 10px rgba(20,44,92,0.12);
+  }
+  .cover-cyber .brow-bar {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 12px;
+    background: #f3f6fb;
+    border-bottom: 1px solid #e6ebf3;
+  }
+  .cover-cyber .brow-dots { display: flex; gap: 5px; }
+  .cover-cyber .brow-dots i { width: 8px; height: 8px; border-radius: 50%; background: #d4dae5; display: block; }
+  .cover-cyber .brow-addr {
+    font-size: 11px; letter-spacing: 0.01em; color: #98a2b3;
+    background: #fff; border: 1px solid #e6ebf3; border-radius: 999px;
+    padding: 3px 12px;
+  }
+  .cover-cyber .brow-shot {
+    height: 206px;
+    background-image: url('images/cy/home.png');
+    background-size: cover;
+    background-position: top left;
+  }
+  .cover-endpoint .ep-scene {
+    position: absolute;
+    left: 0; top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    aspect-ratio: 1096 / 849;
+  }
+  .cover-endpoint .ep-scene .tile {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: 0 10px 40px rgba(106,116,137,0.20);
+  }
+  @media (max-width: 900px) {
+    .cover { height: clamp(220px, 56vw, 420px); }
   }
 </style>
 </head>
@@ -123,7 +196,7 @@
 
 <main>
   <section class="hero wrap" data-reveal>
-    <p style="width: 780px">Hi, I&rsquo;m a designer with 5+ years of experience creating<br>digital experiences across websites, brands, and products.<br>With a background in marketing, I enjoy turning complex ideas into clear and meaningful experiences.</p>
+    <p style="max-width: 780px">Hi, I&rsquo;m a designer with 5+ years of experience creating<br>digital experiences across websites, brands, and products.<br>With a background in marketing, I enjoy turning complex ideas into clear and meaningful experiences.</p>
   </section>
 
   <section class="work-head wrap" data-reveal>
@@ -138,11 +211,13 @@
         <h3>Modular &amp; Block-Based Website Redesign</h3>
         <p class="work-meta" style="font-weight: 400">SOL Edu &amp; Migration / 2025&ndash;Present
 Role: Designer</p>
-        <p class="work-desc" style="color: rgb(33, 33, 33); line-height: 1.5; font-weight: 400">Reframed an outdated WordPress site as a reusable, block-based system. Around 80% of pages are now assembled internally, cutting development costs by 40%.</p>
+        <p class="work-desc" style="color: rgb(33, 33, 33); line-height: 1.5; font-weight: 400">Proposed and led a shift from page-by-page rebuilding to a modular, block-based system for an education and migration agency&rsquo;s WordPress site. By defining reusable components and assembling around 80% of pages independently, the internal team gained the ability to manage content without ongoing developer support.<br><br>The new system cut development costs by 40% and is now being extended to Chinese and Thai markets.</p>
         <a class="case-link" href="Case Study - Modular Redesign.html"><span class="label">Full case study</span><span class="arrow">&rarr;</span></a>
       </div>
       <div class="work-visual">
-        <image-slot id="work-1" shape="rounded" radius="3" placeholder="Project cover — SOL Edu redesign"></image-slot>
+        <div class="cover cover-sol">
+          <img class="cover-fill" src="images/modular/sol-final.png" alt="Dozens of redesigned SOL Edu &amp; Migration pages assembled from one modular block system">
+        </div>
       </div>
     </article>
 
@@ -151,11 +226,13 @@ Role: Designer</p>
         <h3>Visualizing Uncertainty: The Whole-life Crisis</h3>
         <p class="work-meta">Master&rsquo;s Project / 2025
 Role: Designer</p>
-        <p class="work-desc" style="line-height: 1.5; color: rgb(33, 33, 33)">A research-led project exploring how people perceive and move through uncertainty across a lifetime, translating abstract, emotional data into a clear visual system.</p>
+        <p class="work-desc" style="line-height: 1.5; color: rgb(33, 33, 33)">Reframed how people understand life crisis through qualitative research and interviews across age groups, finding that uncertainty isn&rsquo;t tied to a specific stage, but continuous.<br><br>Translated that insight into an emotional UX system: a graph-based visualization capturing feelings, certainty, and turning points over time &mdash; designed to make personal experience feel visible and shared.</p>
         <a class="case-link" href="Case Study - Whole-life Crisis.html"><span class="label">Full case study</span><span class="arrow">&rarr;</span></a>
       </div>
       <div class="work-visual">
-        <image-slot id="work-2" shape="rounded" radius="3" placeholder="Project cover — Whole-life Crisis"></image-slot>
+        <div class="cover cover-crisis">
+          <img class="cover-fill" src="images/lc/hero-cover.png" alt="Overlaid life-graphs mapping crisis, emotion, and certainty across a lifetime">
+        </div>
       </div>
     </article>
 
@@ -164,11 +241,11 @@ Role: Designer</p>
         <h3>Interactive Demo for Cybersecurity Product</h3>
         <p class="work-meta">SecureAge Technology / 2023
 Role: Creative Designer</p>
-        <p class="work-desc" style="line-height: 1.5; color: rgb(33, 33, 33)">An interactive product demo that makes a complex cybersecurity solution tangible for prospective customers, turning technical capabilities into a guided, visual story.</p>
+        <p class="work-desc" style="line-height: 1.5; color: rgb(33, 33, 33)">Created an interactive product demo for a cybersecurity company as part of its digital product experience strategy. I led design execution with cross-functional teams, translating complex workflows into a self-guided online experience using the real product interface.<br><br>The demo shifted product understanding from static marketing content to interactive exploration, helping users evaluate key workflows earlier in the decision-making process and reducing reliance on sales-led demonstrations.</p>
         <a class="case-link" href="Case Study - Interactive Demo.html"><span class="label">Full case study</span><span class="arrow">&rarr;</span></a>
       </div>
       <div class="work-visual">
-        <image-slot id="work-3" shape="rounded" radius="3" placeholder="Project cover — Interactive Demo"></image-slot>
+        <video id="work-3" src="images/demo/demo-final.mp4" autoplay loop muted playsinline></video>
       </div>
     </article>
 
@@ -177,11 +254,13 @@ Role: Creative Designer</p>
         <h3>Website Redesign for Cybersecurity Company</h3>
         <p class="work-meta">SecureAge Technology / 2020&ndash;2021
 Role: Creative Designer / Project Manager</p>
-        <p class="work-desc" style="line-height: 1.5; color: rgb(33, 33, 33)">A full website revamp delivered with external agencies. The redesign lifted traffic by 109%, leads by 133%, and content clicks by 54% within three months.</p>
+        <p class="work-desc" style="line-height: 1.5; color: rgb(33, 33, 33)">Led the end-to-end redesign of a cybersecurity company&rsquo;s website as part of its global expansion strategy. I hired and directed UX and development agencies, aligned cross-functional stakeholders, and helped transform fragmented B2B and B2C experiences into a unified platform.<br><br>The redesign established a scalable foundation for growth and contributed to a 109% increase in web traffic and a 54% increase in content engagement following launch.</p>
         <a class="case-link" href="Case Study - Cybersecurity Redesign.html"><span class="label">Full case study</span><span class="arrow">&rarr;</span></a>
       </div>
       <div class="work-visual">
-        <image-slot id="work-4" shape="rounded" radius="3" placeholder="Project cover — Website Redesign"></image-slot>
+        <div class="cover cover-cyber">
+          <img class="cover-fill" src="images/cy/cover.png" alt="The relaunched SecureAge website">
+        </div>
       </div>
     </article>
 
@@ -190,11 +269,27 @@ Role: Creative Designer / Project Manager</p>
         <h3>Improving the UI of Endpoint Protection Software</h3>
         <p class="work-meta">SecureAge Technology / 2022
 Role: Creative Designer</p>
-        <p class="work-desc" style="line-height: 1.5; color: rgb(33, 33, 33)">A UI improvement effort for endpoint protection software, refining visual hierarchy, consistency, and usability across the product&rsquo;s core screens.</p>
-        <a class="case-link muted"><span class="label">Full case study</span><span class="arrow">&rarr;</span></a>
+        <p class="work-desc" style="line-height: 1.5; color: rgb(33, 33, 33)">Joined a relaunch project for an endpoint security product midway, providing UI direction to an external UX agency. Defined the visual language including color, typography, and icon style, and delivered sample screens that the agency used as a reference to design dozens of screens.<br><br>Also contributed to the web portal design for the anti-phishing feature, focusing on WCAG-compliant contrast, visual consistency, and brand alignment.</p>
+        <a class="case-link" href="Case Study - Endpoint UI.html"><span class="label">Full case study</span><span class="arrow">&rarr;</span></a>
       </div>
       <div class="work-visual">
-        <image-slot id="work-5" shape="rounded" radius="3" placeholder="Project cover — Endpoint UI"></image-slot>
+        <div class="cover cover-endpoint">
+          <div class="ep-scene" role="img" aria-label="A selection of the dozens of CatchPulse screens produced from the UI guidelines">
+            <div class="tile" style="left:0.25%;top:-8.13%;width:30.21%;height:29.35%;transform-origin:top left;transform:rotate(-19deg);background-image:url('images/ep/8d7948324132bbe0.png')"></div>
+            <div class="tile" style="left:61.04%;top:0.68%;width:30.21%;height:29.15%;transform-origin:top left;transform:rotate(-19deg);background-image:url('images/ep/39f7d938f2acbd4e.png')"></div>
+            <div class="tile" style="left:28.59%;top:15.14%;width:30.21%;height:29.15%;transform-origin:top left;transform:rotate(-19deg);background-image:url('images/ep/eebfa3bd27836190.png')"></div>
+            <div class="tile" style="left:79.21%;top:29.06%;width:15.88%;height:33.14%;transform-origin:top left;transform:rotate(-19deg);background-image:url('images/ep/7817c66d21cfafb4.png')"></div>
+            <div class="tile" style="left:-3.87%;top:29.59%;width:30.21%;height:29.15%;transform-origin:top left;transform:rotate(-19deg);background-image:url('images/ep/f46f9227aec17f21.png')"></div>
+            <div class="tile" style="left:46.75%;top:43.51%;width:30.21%;height:29.15%;transform-origin:top left;transform:rotate(-19deg);background-image:url('images/ep/333b03e10e2cca67.png')"></div>
+            <div class="tile" style="left:14.30%;top:57.97%;width:30.21%;height:29.15%;transform-origin:top left;transform:rotate(-19deg);background-image:url('images/ep/da46d2be0524c150.png')"></div>
+            <div class="tile" style="left:87.61%;top:65.21%;width:13.47%;height:10.18%;transform-origin:top left;transform:rotate(-19deg);background-image:url('images/ep/253c6da8f1b90771.png')"></div>
+            <div class="tile" style="left:68.42%;top:70.33%;width:15.88%;height:33.14%;transform-origin:top left;transform:rotate(-19deg);background-image:url('images/ep/fadb8ea1c1185b45.png')"></div>
+            <div class="tile" style="left:-18.15%;top:72.42%;width:30.21%;height:29.15%;transform-origin:top left;transform:rotate(-19deg);background-image:url('images/ep/695929e9d3917e5d.png')"></div>
+            <div class="tile" style="left:91.25%;top:79.20%;width:13.55%;height:15.67%;transform-origin:top left;transform:rotate(-19deg);background-image:url('images/ep/19178877de560c4e.png')"></div>
+            <div class="tile" style="left:35.97%;top:84.78%;width:30.21%;height:29.15%;transform-origin:top left;transform:rotate(-19deg);background-image:url('images/ep/1e7d74e7376b27e5.png')"></div>
+            <div class="tile" style="left:3.61%;top:99.20%;width:30.21%;height:29.15%;transform-origin:top left;transform:rotate(-19deg);background-image:url('images/ep/7a47c3ebf50a6453.png')"></div>
+          </div>
+        </div>
       </div>
     </article>
 
@@ -203,7 +298,7 @@ Role: Creative Designer</p>
 
 <footer class="site-footer">
   <div class="rule"></div>
-  <div class="wrap footer-inner" data-reveal style="height: 280px">
+  <div class="wrap footer-inner" data-reveal style="min-height: 280px">
     <p class="connect">Let&rsquo;s connect<br><a href="mailto:youngsoon.work@gmail.com" style="font-weight: 600">youngsoon.work@gmail.com</a></p>
     <div class="footer-meta">
       <span class="copy">&copy; 2026 Youngsoon Seo</span>
@@ -218,5 +313,19 @@ Role: Creative Designer</p>
 
 <script src="image-slot.js"></script>
 <script src="reveal.js"></script>
+<script>
+  (function () {
+    var vids = document.querySelectorAll('video[autoplay]');
+    if (!vids.length || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var v = e.target;
+        if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+        else { v.pause(); }
+      });
+    }, { threshold: 0.25 });
+    vids.forEach(function (v) { io.observe(v); });
+  })();
+</script>
 </body>
 </html>

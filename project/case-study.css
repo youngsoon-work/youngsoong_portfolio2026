@@ -152,6 +152,51 @@
 
 .cs-divider { max-width: var(--cs-read); margin: 96px auto 0; height: 1px; background: var(--line-soft); }
 
+/* hero figure (full-bleed image just below the title) */
+.cs-hero-figure { margin-top: 48px; }
+.cs-hero-figure img { width: 100%; display: block; border-radius: 4px; }
+
+/* browser chrome mockup (video / image framed in a browser window) */
+.cs-browser { max-width: 980px; margin: 56px auto 0; }
+.cs-browser.wide { max-width: 980px; }
+.cs-browser .bar {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px;
+  background: #f3f6fb;
+  border: 1px solid var(--line-soft);
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+}
+.cs-browser .dots { display: flex; gap: 5px; }
+.cs-browser .dots i { width: 9px; height: 9px; border-radius: 50%; background: #d4dae5; display: block; }
+.cs-browser .addr {
+  font-size: 12px; color: var(--gray-soft); letter-spacing: 0.01em;
+  background: #fff; border: 1px solid var(--line-soft); border-radius: 999px;
+  padding: 3px 14px;
+}
+.cs-browser .stage {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--line-soft);
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
+  min-height: 360px;
+}
+.cs-browser .stage video {
+  width: 100%; display: block;
+}
+.cs-browser .stage video[data-empty] { display: none; }
+.cs-browser .stage video[data-empty] ~ .ph { display: flex; }
+.cs-browser .ph {
+  display: none;
+  position: absolute; inset: 0;
+  flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+  color: var(--gray-soft); font-size: 14px; text-align: center; padding: 24px;
+  background: var(--placeholder);
+}
+.cs-browser .ph .big { font-weight: 500; color: var(--gray); }
+.cs-browser .ph .sub { font-size: 13px; }
+
 @media (max-width: 760px) {
   .cs-intro { grid-template-columns: 1fr; gap: 32px; }
   .cs-facts { grid-template-columns: 1fr 1fr; gap: 28px 40px; }
