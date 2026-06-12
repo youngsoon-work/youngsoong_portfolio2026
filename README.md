@@ -23,3 +23,67 @@ The design medium is **HTML/CSS/JS** — these are prototypes, not production co
 - `README.md` — this file
 - `chats/` — conversation transcripts (read these!)
 - `project/` — the `Portfolio` project files (HTML prototypes, assets, components)
+
+---
+
+# Deployment
+
+This portfolio is a static HTML/CSS/JS site hosted on **Firebase Hosting**.
+
+- **Live site:** https://portfolio2026-5cf9e.web.app
+- **Firebase project:** `portfolio2026-5cf9e`
+- **GitHub repo:** https://github.com/youngsoon-work/youngsoong_portfolio2026
+- **Served directory:** `project/` (configured via `firebase.json` → `"public": "project"`)
+
+## Auto-deploy (GitHub Actions)
+
+Every push to the `main` branch automatically deploys to Firebase Hosting.
+
+```
+edit files → git commit → git push origin main
+                                    ↓
+              GitHub Actions deploys to Firebase automatically
+```
+
+No manual `firebase deploy` is needed.
+
+**How it works:**
+- Workflow: `.github/workflows/firebase-hosting-deploy.yml`
+- Triggered on push to `main`
+- Authenticates using the GitHub repo secret `FIREBASE_SERVICE_ACCOUNT`
+  (a Firebase service account JSON key for
+  `firebase-adminsdk-fbsvc@portfolio2026-5cf9e.iam.gserviceaccount.com`)
+- Uses the `FirebaseExtended/action-hosting-deploy` action, deploying to the
+  `live` channel of project `portfolio2026-5cf9e`
+
+## Manual deploy (fallback)
+
+If you ever need to deploy by hand (outside CI), authenticate with the service
+account key and run the Firebase CLI from the repo root:
+
+```bash
+export GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account-key.json
+firebase deploy --project portfolio2026-5cf9e --only hosting
+```
+
+## Configuration files
+
+- `firebase.json` — hosting config. Serves `project/`, with `cleanUrls` enabled
+  and `/` rewritten to `/Home.html`.
+- `.firebaserc` — sets the default Firebase project to `portfolio2026-5cf9e`.
+- `.gitignore` — ignores the local `.firebase/` deploy cache.
+
+## Custom domain (pending)
+
+The site is intended to be served from `youngsoon.work`. To connect it:
+
+1. In the [Firebase Console → Hosting](https://console.firebase.google.com/project/portfolio2026-5cf9e/hosting),
+   add `youngsoon.work` as a custom domain.
+2. In the DNS provider (Cloudflare), add the records Firebase provides:
+   - **A** record: `youngsoon.work` → `199.36.158.100`
+   - **TXT** record: `youngsoon.work` → `hosting-site=portfolio2026-5cf9e`
+3. The previous portfolio (currently on Vercel) is being moved to the
+   `2023.youngsoon.work` subdomain — add a CNAME for `2023` pointing to Vercel,
+   and register that subdomain in the Vercel project.
+4. Once Firebase verifies ownership, replace the existing Vercel A record
+   (`76.76.21.21`) with Firebase's IP so `youngsoon.work` resolves to Firebase.
