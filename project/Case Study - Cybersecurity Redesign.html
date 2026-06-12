@@ -48,31 +48,40 @@
     </div>
   </section>
 
-  <figure class="cs-figure wide" data-reveal>
-    <image-slot id="cy-cover" src="images/cy/home.png" fit="cover" shape="rounded" radius="3" placeholder="Redesigned SecureAge home page" style="height:480px;background:#fff"></image-slot>
-    <figcaption>The relaunched SecureAge website.</figcaption>
-  </figure>
+  <div class="wrap" data-reveal>
+    <figure class="cs-figure" style="max-width:none;width:100%;margin:56px 0 0">
+      <img src="images/cy/home.png" alt="The relaunched SecureAge home page" style="width:100%;display:block;border-radius:3px">
+      <figcaption>The relaunched SecureAge website.</figcaption>
+    </figure>
+  </div>
 
   <section class="cs-section" data-reveal>
     <h2>Background</h2>
     <p>As part of its global expansion, the company needed a website that could support scalability, clear product communication, and a high standard of brand credibility. However, the existing site had been built internally and was no longer sufficient to support growing business and marketing needs. This created the need for a strategic redesign involving external partners and cross-functional collaboration.</p>
   </section>
 
+  <div class="cs-ba wide" data-reveal>
+    <div class="col">
+      <div class="lbl">Before — the old website</div>
+      <div class="vp" style="height:480px;overflow-y:auto;border-radius:4px;background:#fff;border:1px solid var(--line-soft)"><img src="uploads/old-opt.jpg" alt="The old SecureAge homepage before the redesign — full page" style="width:100%;display:block"></div>
+    </div>
+    <div class="col">
+      <div class="lbl">After — the redesigned website</div>
+      <div class="vp" style="height:480px;overflow-y:auto;border-radius:4px;background:#fff;border:1px solid var(--line-soft)"><img src="uploads/new-opt.jpg" alt="The redesigned SecureAge homepage — full page" style="width:100%;display:block"></div>
+    </div>
+  </div>
+  <p style="width:min(980px, 100% - 2 * var(--cs-gut));margin:14px auto 0;font-size:14px;color:var(--gray-soft);text-align:center">Scroll either panel to compare the full pages.</p>
+
   <section class="cs-section" data-reveal>
     <h2>Design process</h2>
     <ol class="cs-steps">
       <li><span class="num"></span><div><p class="st-title">Agency hiring &amp; alignment</p><p class="st-desc">I identified, vetted, and onboarded UX and development agencies, defining scope, deliverables, and timelines while aligning them with user needs, business goals, and brand strategy.</p></div></li>
-      <li><span class="num"></span><div><p class="st-title">Research</p><p class="st-desc"><strong style="color:var(--ink-strong);font-weight:500">Internal:</strong> Conducted stakeholder interviews across sales, product, support, and leadership, and analyzed analytics/CRM data to define target users and key behaviors.</p><p class="st-desc"><strong style="color:var(--ink-strong);font-weight:500">External:</strong> Collaborated with the agency through workshops to define personas and customer journeys.</p></div></li>
-      <li><span class="num"></span><div><p class="st-title">Information architecture &amp; wireframing</p><p class="st-desc">I worked with the UX agency to define information architecture and key user flows, providing feedback on wireframes and directly creating key wireframes when needed. I also facilitated stakeholder workshops to validate direction and ensure alignment.</p></div></li>
-      <li><span class="num"></span><div><p class="st-title">Visual design</p><p class="st-desc">We established a cohesive visual direction based on core brand values, iterating closely with the agency. I guided visual direction, contributed to key UI decisions (e.g. icon styles, layout patterns), and ensured alignment between design and content.</p></div></li>
+      <li><span class="num"></span><div><p class="st-title">Research</p><p class="st-desc"><strong style="color:var(--ink-strong);font-weight:500">Internal:</strong> Conducted stakeholder interviews across sales, product, support, and leadership, and analyzed analytics/CRM data to define target users and key behaviors.</p><p class="st-desc"><strong style="color:var(--ink-strong);font-weight:500">External:</strong> Collaborated with the agency through workshops to define personas and customer journeys.</p><img src="uploads/sa-research.png" alt="Persona and customer-journey boards defined in agency workshops — IT Professional, CXO, and Analyst" style="width:100%; max-width:660px; display:block; border-radius:6px; margin-top:18px"></div></li>
+      <li><span class="num"></span><div><p class="st-title">Information architecture &amp; wireframing</p><p class="st-desc">I worked with the UX agency to define information architecture and key user flows, providing feedback on wireframes and directly creating key wireframes when needed. I also facilitated stakeholder workshops to validate direction and ensure alignment.</p><img src="uploads/Frame 2199496.png" alt="Low-fidelity wireframes for key pages, defined with the UX agency" style="width:100%; max-width:660px; display:block; border-radius:6px; margin-top:18px"></div></li>
+      <li><span class="num"></span><div><p class="st-title">Visual design</p><p class="st-desc">We established a cohesive visual direction based on core brand values, iterating closely with the agency. I guided visual direction, contributed to key UI decisions (e.g. icon styles, layout patterns), and ensured alignment between design and content.</p><img src="uploads/sa-visual.png" alt="Visual design explorations of the homepage hero — iterating on imagery, layout, and messaging with the agency" style="width:100%; max-width:660px; display:block; border-radius:6px; margin-top:18px"></div></li>
       <li><span class="num"></span><div><p class="st-title">Cross-team coordination</p><p class="st-desc">Once the structure was defined, I collaborated closely with marketing (product managers), SEO specialists, the content agency, IT support, and product teams. I acted as the central liaison, ensuring alignment on priorities, timelines, and execution across all stakeholders.</p></div></li>
     </ol>
   </section>
-
-  <figure class="cs-scroll wide" data-reveal>
-    <div class="vp"><img src="images/cy/wireframes.png" alt="Redesigned home page layout and key sections"></div>
-    <figcaption>Information architecture and key page layouts, defined with the UX agency. <span class="hint">Scroll to view the full page.</span></figcaption>
-  </figure>
 
   <section class="cs-section" data-reveal>
     <h2>Key problems</h2>
@@ -97,22 +106,11 @@
   <div class="cs-ba" data-reveal>
     <div class="col">
       <div class="lbl">Before</div>
-      <image-slot id="cy-nav-before" src="images/cy/nav-before.png" fit="contain" shape="rounded" radius="3" placeholder="Old product navigation" style="height:200px;background:#fff"></image-slot>
+      <image-slot id="cy-nav-before" src="images/cy/nav-before.png" fit="contain" shape="rounded" radius="3" placeholder="Old product navigation" style="height:180px;background:#fff"></image-slot>
     </div>
     <div class="col">
       <div class="lbl">After</div>
-      <image-slot id="cy-nav-after" src="images/cy/nav-after.png" fit="contain" shape="rounded" radius="3" placeholder="Restructured navigation" style="height:200px;background:#fff"></image-slot>
-    </div>
-  </div>
-
-  <div class="cs-ba" data-reveal style="margin-top:24px">
-    <div class="col">
-      <div class="lbl">Before &mdash; product overview</div>
-      <image-slot id="cy-overview-before" src="images/cy/overview-before.png" fit="contain" shape="rounded" radius="3" placeholder="Old product overview" style="height:320px;background:#fff"></image-slot>
-    </div>
-    <div class="col">
-      <div class="lbl">After &mdash; product overview</div>
-      <image-slot id="cy-overview-after" src="images/cy/overview-after.png" fit="contain" shape="rounded" radius="3" placeholder="Restructured overview" style="height:320px;background:#fff"></image-slot>
+      <image-slot id="cy-nav-after" src="images/cy/nav-after.png" fit="contain" shape="rounded" radius="3" placeholder="Restructured navigation" style="height:180px;background:#fff"></image-slot>
     </div>
   </div>
 
@@ -131,7 +129,8 @@
   </section>
 
   <figure class="cs-figure" data-reveal>
-    <image-slot id="cy-technology" src="images/cy/technology.png" fit="contain" shape="rounded" radius="3" placeholder="Our Technology page" style="height:340px;background:#fff"></image-slot>
+    <div class="vp" style="height:400px;overflow-y:auto;border-radius:4px;background:#fff;border:1px solid var(--line-soft)"><img src="uploads/our-technology-opt.jpg" alt="The new 'Our Technology' page — SecureData, the encryption gamechanger" style="width:100%;display:block"></div>
+    <figcaption>The new &lsquo;Our Technology&rsquo; page. <span style="opacity:.75">Scroll to view the full page.</span></figcaption>
   </figure>
 
   <section class="cs-section tight" data-reveal>
@@ -139,14 +138,14 @@
     <p>Unified previously separate websites (main website and B2C) into a single platform, reducing confusion and enabling cross-selling.</p>
   </section>
 
-  <div class="cs-ba" data-reveal>
+  <div class="cs-ba wide" data-reveal>
     <div class="col">
-      <div class="lbl">Before</div>
-      <image-slot id="cy-b2c-before" src="images/cy/b2c-before.png" fit="contain" shape="rounded" radius="3" placeholder="Separate B2C site" style="height:240px;background:#fff"></image-slot>
+      <div class="lbl">Before &mdash; separate B2C site</div>
+      <div class="vp" style="height:420px;overflow-y:auto;border-radius:4px;background:#fff;border:1px solid var(--line-soft)"><img src="uploads/before-sap-opt.jpg" alt="Old separate B2C site" style="width:100%;display:block"></div>
     </div>
     <div class="col">
-      <div class="lbl">After</div>
-      <image-slot id="cy-b2c-after" src="images/cy/b2c-after.png" fit="contain" shape="rounded" radius="3" placeholder="Unified platform" style="height:240px;background:#fff"></image-slot>
+      <div class="lbl">After &mdash; unified platform</div>
+      <div class="vp" style="height:420px;overflow-y:auto;border-radius:4px;background:#fff;border:1px solid var(--line-soft)"><img src="images/cy/b2c-after.png" alt="Unified B2B and B2C platform" style="width:100%;display:block"></div>
     </div>
   </div>
 
@@ -154,11 +153,6 @@
     <h3>5. More realistic product representation</h3>
     <p>Replaced illustrative visuals with real product UI to improve clarity and trust.</p>
   </section>
-
-  <figure class="cs-scroll wide" data-reveal>
-    <div class="vp"><img src="images/cy/ui-compare.png" alt="The previous SecureAPlus product page, built on illustrative visuals"></div>
-    <figcaption>The previous product pages leaned on illustrative graphics; the redesign replaced them with real product UI. <span class="hint">Scroll to view the full page.</span></figcaption>
-  </figure>
 
   <section class="cs-section" data-reveal>
     <h2>Iteration</h2>
@@ -187,7 +181,7 @@
 
 <footer class="site-footer">
   <div class="rule"></div>
-  <div class="wrap footer-inner" data-reveal style="height: 280px">
+  <div class="wrap footer-inner" data-reveal style="min-height: 280px">
     <p class="connect">Let&rsquo;s connect<br><a href="mailto:youngsoon.work@gmail.com" style="font-weight: 600">youngsoon.work@gmail.com</a></p>
     <div class="footer-meta">
       <span class="copy">&copy; 2026 Youngsoon Seo</span>

@@ -49,7 +49,7 @@
   </section>
 
   <figure class="cs-figure wide" data-reveal>
-    <image-slot id="id-cover" src="images/demo/research.png" fit="cover" shape="rounded" radius="3" placeholder="Security Suite — real product UI" style="height:480px;background:#fff"></image-slot>
+    <video src="images/demo/demo-final.mp4" autoplay loop muted playsinline style="width:100%; display:block; border-radius:6px; background:#fff"></video>
     <figcaption>The demo is built on the real product interface &mdash; here, files encrypted in place.</figcaption>
   </figure>
 
@@ -75,6 +75,9 @@
   <section class="cs-section" data-reveal>
     <h2>Design strategy</h2>
     <p>I explored multiple ways of presenting the product &mdash; from static visuals to guided tours and demo tools &mdash; and proposed a lightweight, interactive approach that could be executed with existing resources. The strategy was shaped by the following decisions:</p>
+    <figure class="cs-figure" data-reveal style="width:min(720px, 100% - 2 * var(--cs-gut)); margin-top:36px">
+      <img src="images/demo/demo-strategy.png" alt="Proactive encryption shown directly in the file explorer" style="width:100%; display:block; border-radius:6px">
+    </figure>
     <ol class="cs-steps">
       <li><span class="num"></span><div><p class="st-title">Focused presentation</p><p class="st-desc">Rather than showing the entire interface, the demo highlights a few key interactions. This reduces cognitive load and keeps the experience clear and purposeful.</p></div></li>
       <li><span class="num"></span><div><p class="st-title">Leverage available resources</p><p class="st-desc">Instead of relying on external tools or agencies, I collaborated with a developer and produced the demo myself, enabling faster iteration and full control over the experience.</p></div></li>
@@ -88,22 +91,10 @@
     <h2>Process</h2>
     <ol class="cs-steps">
       <li><span class="num"></span><div><p class="st-title">Structuring the demo</p><p class="st-desc">I worked with the COO to identify the most important features from a sales perspective. We focused on three key capabilities &mdash; proactive encryption, invisible encryption, and secure collaboration &mdash; and translated them into a self-guided experience.</p></div></li>
-      <li><span class="num"></span><div><p class="st-title">Storyboarding</p><p class="st-desc">I created quick sketches and refined them into detailed storyboards using real product screenshots. This allowed stakeholders to align early and iterate efficiently through feedback.</p></div></li>
-      <li><span class="num"></span><div><p class="st-title">Recording &amp; editing</p><p class="st-desc">I collaborated with a sales engineer to capture product workflows and provided guidelines for visual consistency. The recordings were edited into short, focused segments aligned with the intended user flow.</p></div></li>
-      <li><span class="num"></span><div><p class="st-title">Implementation</p><p class="st-desc">I worked with marketing and a developer to build a dedicated demo page. The experience guides users through one feature at a time with scroll-based progression and click interaction. On mobile, the layout was adapted with simplified navigation to maintain readability.</p></div></li>
+      <li><span class="num"></span><div><p class="st-title">Storyboarding</p><p class="st-desc">I created quick sketches and refined them into detailed storyboards using real product screenshots. This allowed stakeholders to align early and iterate efficiently through feedback.</p><img src="images/demo/demo-storyboarding.png" alt="Detailed storyboards built from real product screenshots" style="width:100%; max-width:660px; display:block; border-radius:6px; margin-top:18px"></div></li>
+      <li><span class="num"></span><div><p class="st-title">Recording &amp; editing</p><p class="st-desc">I collaborated with a sales engineer to capture product workflows and provided guidelines for visual consistency. The recordings were edited into short, focused segments aligned with the intended user flow.</p><img src="images/demo/demo-recording.png" alt="Recorded product workflows edited into short, focused segments" style="width:100%; max-width:660px; display:block; border-radius:6px; margin-top:18px"></div></li>
+      <li><span class="num"></span><div><p class="st-title">Implementation</p><p class="st-desc">I worked with marketing and a developer to build a dedicated demo page. The experience guides users through one feature at a time with scroll-based progression and click interaction. On mobile, the layout was adapted with simplified navigation to maintain readability.</p><img src="images/demo/demo-implementation.png" alt="Before and after of the site header, with a new Watch demo entry point" style="width:100%; max-width:660px; display:block; border-radius:6px; margin-top:18px"></div></li>
     </ol>
-  </section>
-
-  <figure class="cs-figure" data-reveal style="max-width:420px">
-    <image-slot id="id-storyboard" src="images/demo/storyboard.png" fit="contain" shape="rounded" radius="3" placeholder="Storyboard built from real screenshots" style="height:560px;background:#fff"></image-slot>
-    <figcaption>Storyboards built from real product screenshots aligned stakeholders early.</figcaption>
-  </figure>
-
-  <section class="cs-section tight" data-reveal>
-    <p style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-soft);margin:0 0 10px">Before &mdash; a static header</p>
-    <image-slot id="id-before" src="images/demo/header-before.png" fit="contain" shape="rounded" radius="3" placeholder="Static header" style="width:100%;height:56px;background:#fff"></image-slot>
-    <p style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-soft);margin:28px 0 10px">After &mdash; an interactive header</p>
-    <image-slot id="id-after" src="images/demo/header-after.png" fit="contain" shape="rounded" radius="3" placeholder="Interactive header" style="width:100%;height:56px;background:#fff"></image-slot>
   </section>
 
   <section class="cs-section" data-reveal>
@@ -112,9 +103,9 @@
     <p>Overall, it introduced a more experience-driven way of presenting the product online, moving beyond static content.</p>
   </section>
 
-  <figure class="cs-scroll wide" data-reveal>
-    <div class="vp"><img src="images/demo/demo-page.png" alt="The published Security Suite demo page"></div>
-    <figcaption>The published demo page walks users through one capability at a time. <span class="hint">Scroll to view the full page.</span></figcaption>
+  <figure class="cs-figure wide" data-reveal>
+    <video src="images/demo/demo-development.mp4" autoplay loop muted playsinline style="width:100%; display:block; border-radius:6px; background:#fff"></video>
+    <figcaption>The published demo page walks users through one capability at a time.</figcaption>
   </figure>
 
   <div class="cs-divider" data-reveal></div>
@@ -128,7 +119,7 @@
 
 <footer class="site-footer">
   <div class="rule"></div>
-  <div class="wrap footer-inner" data-reveal style="height: 280px">
+  <div class="wrap footer-inner" data-reveal style="min-height: 280px">
     <p class="connect">Let&rsquo;s connect<br><a href="mailto:youngsoon.work@gmail.com" style="font-weight: 600">youngsoon.work@gmail.com</a></p>
     <div class="footer-meta">
       <span class="copy">&copy; 2026 Youngsoon Seo</span>
@@ -143,5 +134,19 @@
 
 <script src="image-slot.js"></script>
 <script src="reveal.js"></script>
+<script>
+  (function () {
+    var vids = document.querySelectorAll('video[autoplay]');
+    if (!vids.length || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var v = e.target;
+        if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+        else { v.pause(); }
+      });
+    }, { threshold: 0.25 });
+    vids.forEach(function (v) { io.observe(v); });
+  })();
+</script>
 </body>
 </html>

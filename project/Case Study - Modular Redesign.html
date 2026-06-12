@@ -30,7 +30,7 @@
   </section>
 
   <figure class="cs-figure wide cs-hero-figure" data-reveal>
-    <img src="images/modular/sol-admin.png" alt="The WordPress editing interface &mdash; internal teams add sections and rows to build pages without a developer.">
+    <img src="images/modular/sol-admin.png" alt="The WordPress editing interface — internal teams add sections and rows (Section Title, Content Repeater, Image, etc.) to build pages without a developer.">
   </figure>
 
   <section class="wrap" data-reveal>
@@ -39,6 +39,7 @@
       <div><dt>Role</dt><dd>Designer</dd></div>
       <div><dt>Year</dt><dd>2025&ndash;Present</dd></div>
     </dl>
+
     <div class="cs-intro">
       <div>
         <h2>About the project</h2>
@@ -57,9 +58,7 @@
       <span class="addr">solnz.net/en</span>
     </div>
     <div class="stage">
-      <video id="cs-cover-video" data-empty autoplay loop muted playsinline preload="metadata"
-        onloadeddata="this.removeAttribute('data-empty')"
-        onerror="this.setAttribute('data-empty','')">
+      <video id="cs-cover-video" data-empty autoplay loop muted playsinline preload="metadata" onloadeddata="this.removeAttribute('data-empty')" onerror="this.setAttribute('data-empty','')">
         <source src="images/modular/solnz-cover.mp4" type="video/mp4">
       </video>
       <div class="ph">
@@ -79,7 +78,7 @@
   </section>
 
   <figure class="cs-figure" data-reveal style="max-width:720px">
-    <img src="images/modular/sol-old.png" alt="The previous SOL Edu &amp; Migration website." style="width:100%;display:block;border-radius:4px">
+    <img src="images/modular/sol-old.png" alt="The previous SOL Edu & Migration website — long, hard-coded marketing pages built page-by-page with plugins." style="width:100%;display:block;border-radius:4px">
     <figcaption>The previous site &mdash; long, hard-coded pages built one at a time.</figcaption>
   </figure>
 
@@ -87,16 +86,16 @@
     <h2>Design strategy</h2>
     <p>After several discussions with the CEO, I identified the key priorities for this project:</p>
     <ul class="cs-list">
-      <li><strong style="color:var(--ink-strong);font-weight:500">Save time</strong> &mdash; quickly stabilize and relaunch the website.</li>
-      <li><strong style="color:var(--ink-strong);font-weight:500">Reduce cost</strong> &mdash; minimize reliance on hourly-based external developers.</li>
-      <li><strong style="color:var(--ink-strong);font-weight:500">Improve performance</strong> &mdash; fix errors and optimize speed.</li>
-      <li><strong style="color:var(--ink-strong);font-weight:500">Enable internal management</strong> &mdash; reduce dependency on external support.</li>
+      <li><strong style="color:var(--ink-strong);font-weight:500">Save time</strong> — quickly stabilize and relaunch the website.</li>
+      <li><strong style="color:var(--ink-strong);font-weight:500">Reduce cost</strong> — minimize reliance on hourly-based external developers.</li>
+      <li><strong style="color:var(--ink-strong);font-weight:500">Improve performance</strong> — fix errors and optimize speed.</li>
+      <li><strong style="color:var(--ink-strong);font-weight:500">Enable internal management</strong> — reduce dependency on external support.</li>
     </ul>
     <div class="hmw">
       <span class="q">How might we</span>
       Create a scalable, self-sustaining website that can be managed internally while improving performance and reliability?
     </div>
-    <p>Instead of rebuilding pages individually, I proposed shifting from a page-based approach to a modular, block-based system. By designing reusable content blocks &mdash; such as 1-column and 2-column layouts that can flexibly incorporate images, titles, and tables &mdash; pages could be assembled without additional development.</p>
+    <p>Instead of rebuilding pages individually, I proposed shifting from a page-based approach to a modular, block-based system. By designing reusable content blocks — such as 1-column and 2-column layouts that can flexibly incorporate images, titles, and tables — pages could be assembled without additional development.</p>
     <p>This approach reframed the website from a collection of fixed pages into a system of reusable components, enabling internal teams to create and manage content independently.</p>
   </section>
 
@@ -112,12 +111,16 @@
   .mod-fig .mh-t{ display:block; font-size:18px; font-weight:500; letter-spacing:-.01em; color:var(--ink-strong); }
   .mod-fig .mod-note{ margin:24px 0 0; font-size:14px; line-height:1.55; color:var(--gray); text-wrap:pretty; }
   .mod-fig .mod-body{ flex:1; }
+
+  /* block colour scale (brand blues) */
   .mod-fig{ --mb1:#e8eef7; --mb1t:#46556e; --mb2:#c2d1ea; --mb2t:#30405a; --mb3:#8aa3ca; --mb3t:#fff; --mb4:#506f9f; --mb4t:#fff; }
   .mod-fig .blk{ border-radius:6px; font-size:12.5px; font-weight:500; letter-spacing:-.01em; display:flex; align-items:center; white-space:nowrap; box-shadow:inset 0 0 0 1px rgba(40,55,80,.07); }
   .mod-fig .b1{ background:var(--mb1); color:var(--mb1t); }
   .mod-fig .b2{ background:var(--mb2); color:var(--mb2t); }
   .mod-fig .b3{ background:var(--mb3); color:var(--mb3t); }
   .mod-fig .b4{ background:var(--mb4); color:var(--mb4t); }
+
+  /* LEFT — monolithic pages */
   .mod-fig .mod-pages{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
   .mod-fig .page{ border:1px solid var(--line-soft); border-radius:6px; background:#fff; }
   .mod-fig .page.mono{ height:128px; padding:13px 13px 14px; display:flex; flex-direction:column; gap:8px; }
@@ -127,15 +130,19 @@
   .mod-fig .page.mono i.s3{ width:88%; }
   .mod-fig .page.mono i.last{ width:55%; margin-top:auto; }
   .mod-fig .page.ghost{ height:128px; border-style:dashed; display:flex; align-items:center; justify-content:center; color:var(--gray-soft); font-size:13px; background:transparent; }
+
+  /* RIGHT — block system */
   .mod-fig .mod-system{ display:grid; grid-template-columns:128px 46px 1fr; align-items:center; gap:0; }
   .mod-fig .lib{ display:flex; flex-direction:column; gap:9px; }
-  .mod-fig .lib-label,.mod-fig .asm-label{ font-size:11px; letter-spacing:.07em; text-transform:uppercase; color:var(--gray-soft); margin-bottom:5px; }
+  .mod-fig .lib-label,
+  .mod-fig .asm-label{ font-size:11px; letter-spacing:.07em; text-transform:uppercase; color:var(--gray-soft); margin-bottom:5px; }
   .mod-fig .lib .blk{ height:40px; padding:0 14px; }
   .mod-fig .branch{ align-self:center; display:flex; align-items:center; justify-content:center; color:var(--gray-soft); }
   .mod-fig .assembled{ display:flex; gap:16px; }
   .mod-fig .asm-col{ flex:1; min-width:0; }
   .mod-fig .page.comp{ padding:6px; display:flex; flex-direction:column; gap:5px; }
   .mod-fig .page.comp .blk{ height:31px; padding:0 12px; justify-content:flex-start; }
+
   @media (max-width:720px){
     .mod-fig .mod-grid{ grid-template-columns:1fr; gap:32px; padding:28px 22px; }
     .mod-fig .mod-div{ width:auto; height:1px; }
@@ -145,6 +152,7 @@
   </style>
   <figure class="cs-figure wide mod-fig" data-reveal>
     <div class="mod-grid">
+
       <section class="mod-col">
         <header class="mod-head">
           <span class="mh-k">Initial plan</span>
@@ -158,9 +166,11 @@
             <div class="page ghost">+17 more</div>
           </div>
         </div>
-        <p class="mod-note">Every page rebuilt from scratch &mdash; roughly 20 pages, each its own development effort.</p>
+        <p class="mod-note">Every page rebuilt from scratch — roughly 20 pages, each its own development effort.</p>
       </section>
+
       <div class="mod-div" aria-hidden="true"></div>
+
       <section class="mod-col">
         <header class="mod-head">
           <span class="mh-k">My proposal</span>
@@ -202,8 +212,9 @@
             </div>
           </div>
         </div>
-        <p class="mod-note">A few reusable blocks, reordered to assemble any page &mdash; no new development.</p>
+        <p class="mod-note">A few reusable blocks, reordered to assemble any page — no new development.</p>
       </section>
+
     </div>
     <figcaption>From a page-by-page build to a reusable block system.</figcaption>
   </figure>
@@ -211,10 +222,10 @@
   <section class="cs-section" data-reveal>
     <p>This shift fundamentally changed the scope of the project from a simple redesign to a sustainable system:</p>
     <ul class="cs-list">
-      <li><strong style="color:var(--ink-strong);font-weight:500">Reduced developer dependency</strong> &mdash; internal staff could assemble pages without relying on external developers.</li>
-      <li><strong style="color:var(--ink-strong);font-weight:500">Faster content updates</strong> &mdash; new pages and updates could be published quickly without development cycles.</li>
-      <li><strong style="color:var(--ink-strong);font-weight:500">Lower long-term costs</strong> &mdash; instead of rebuilding ~20 pages individually, only a few modular templates were developed and scaled internally.</li>
-      <li><strong style="color:var(--ink-strong);font-weight:500">Fit for a small team</strong> &mdash; the solution aligned with the company&rsquo;s reality: no dedicated IT team.</li>
+      <li><strong style="color:var(--ink-strong);font-weight:500">Reduced developer dependency</strong> — internal staff could assemble pages without relying on external developers.</li>
+      <li><strong style="color:var(--ink-strong);font-weight:500">Faster content updates</strong> — new pages and updates could be published quickly without development cycles.</li>
+      <li><strong style="color:var(--ink-strong);font-weight:500">Lower long-term costs</strong> — instead of rebuilding ~20 pages individually, only a few modular templates were developed and scaled internally.</li>
+      <li><strong style="color:var(--ink-strong);font-weight:500">Fit for a small team</strong> — the solution aligned with the company&rsquo;s reality: no dedicated IT team.</li>
     </ul>
   </section>
 
@@ -223,7 +234,7 @@
     <p>Instead of a linear redesign, I focused on restructuring the website into a scalable system.</p>
     <ol class="cs-steps">
       <li><span class="num"></span><div><p class="st-title">Audit &amp; simplify</p><p class="st-desc">Reviewed all existing pages, identified recurring patterns, and categorized content into clear page types to reduce complexity.</p></div></li>
-      <li><span class="num"></span><div><p class="st-title">Define the modular system</p><p class="st-desc">Designed reusable blocks &mdash; hero sections, 2-column layouts, repeated content, and forms &mdash; to standardize page structures.</p></div></li>
+      <li><span class="num"></span><div><p class="st-title">Define the modular system</p><p class="st-desc">Designed reusable blocks — hero sections, 2-column layouts, repeated content, and forms — to standardize page structures.</p></div></li>
       <li><span class="num"></span><div><p class="st-title">Template collaboration</p><p class="st-desc">Worked with an external developer to build 2&ndash;3 sample templates that established the foundation of the system.</p></div></li>
       <li><span class="num"></span><div><p class="st-title">Internal assembly</p><p class="st-desc">Redesigned all website pages and assembled roughly 80% of them independently using reusable blocks, significantly reducing developer involvement.</p></div></li>
       <li><span class="num"></span><div><p class="st-title">Ongoing expansion</p><p class="st-desc">Launched the Korean and English versions, and extended the same modular system to additional languages, including Thai and Chinese.</p></div></li>
@@ -231,12 +242,12 @@
   </section>
 
   <figure class="cs-figure" data-reveal style="max-width:720px">
-    <img src="images/modular/sol-block.png" alt="Pages assembled from reusable content blocks." style="width:100%;display:block;border-radius:4px">
+    <img src="images/modular/sol-block.png" alt="Pages assembled from reusable content blocks — foundation course, recommended schools grid, and pathway sections composed from the same building blocks." style="width:100%;display:block;border-radius:4px">
     <figcaption>Pages assembled from a shared library of reusable content blocks.</figcaption>
   </figure>
 
   <figure class="cs-figure" data-reveal style="max-width:720px">
-    <img src="images/modular/sol-admin.png" alt="The WordPress editing interface &mdash; internal teams add sections and rows to build pages without a developer." style="width:100%;display:block;border-radius:4px">
+    <img src="images/modular/sol-admin.png" alt="The WordPress editing interface — internal teams add sections and rows (Section Title, Content Repeater, Image, etc.) to build pages without a developer." style="width:100%;display:block;border-radius:4px">
     <figcaption>Internal teams compose pages by adding sections and rows &mdash; no developer required.</figcaption>
   </figure>
 
@@ -251,7 +262,7 @@
     </ul>
 
     <figure class="cs-figure" data-reveal style="max-width:none;width:100%;margin:32px 0 0">
-      <img src="images/modular/sol-faq-before.png" alt="Previous FAQ content as long static PDFs." style="width:100%;display:block;border-radius:4px">
+      <img src="images/modular/sol-faq-before.png" alt="The previous orientation and FAQ content, delivered as long static PDF documents with a table of contents and dense pages." style="width:100%;display:block;border-radius:4px">
       <figcaption>Before &mdash; orientation and FAQ content lived in long static PDFs.</figcaption>
     </figure>
 
@@ -266,7 +277,7 @@
   </section>
 
   <figure class="cs-figure" data-reveal style="max-width:720px">
-    <img src="images/modular/sol-faq-after.png" alt="The new searchable, self-service FAQ knowledge base." style="width:100%;display:block;border-radius:4px">
+    <img src="images/modular/sol-faq-after.png" alt="The new searchable, self-service FAQ knowledge base — categorized left-nav, breadcrumb, search, and structured article pages built from reusable blocks." style="width:100%;display:block;border-radius:4px">
     <figcaption>After &mdash; a searchable, self-service knowledge base built from reusable blocks.</figcaption>
   </figure>
 
@@ -284,7 +295,7 @@
   </section>
 
   <figure class="cs-figure wide" data-reveal>
-    <img src="images/modular/sol-final.png" alt="A montage of redesigned SOL Edu &amp; Migration pages assembled from one block system." style="width:100%;display:block;border-radius:4px">
+    <img src="images/modular/sol-final.png" alt="A montage of redesigned SOL Edu & Migration pages — news listings, early-study service, branch locations, NCEA guides, and school profiles, all assembled from the shared block system." style="width:100%;display:block;border-radius:4px">
     <figcaption>The final site &mdash; dozens of pages assembled by internal teams from one block system.</figcaption>
   </figure>
 

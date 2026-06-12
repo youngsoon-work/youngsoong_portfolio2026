@@ -6,6 +6,7 @@
 <title>Youngsoon Seo — Designer</title>
 <link rel="stylesheet" href="styles.css">
 <style>
+  /* ---------- hero ---------- */
   .hero { padding-block: 86px; }
   .hero p {
     margin: 0;
@@ -16,6 +17,8 @@
     color: var(--ink-strong);
     text-wrap: pretty;
   }
+
+  /* ---------- selected work header ---------- */
   .work-head { padding-top: 1px; }
   .work-head .rule { height: 1px; background: var(--line); }
   .work-head h2 {
@@ -25,6 +28,8 @@
     letter-spacing: 0px;
     color: var(--ink);
   }
+
+  /* ---------- work list ---------- */
   .work { padding-top: 16px; }
   .work-item {
     display: grid;
@@ -67,16 +72,20 @@
     font-size: 16px;
     color: var(--ink);
     width: fit-content;
-    position: relative;
   }
   .case-link .arrow { transition: transform .3s cubic-bezier(.2,.7,.2,1); }
-  .case-link::after { content: ""; position: absolute; }
+  .case-link::after {
+    content: "";
+    position: absolute;
+  }
+  .case-link { position: relative; }
   .case-link span.label { border-bottom: 1px solid transparent; transition: border-color .25s; padding-bottom: 1px; }
   .case-link:hover span.label { border-color: var(--ink); }
   .case-link:hover .arrow { transform: translateX(5px); }
   .case-link.muted { color: var(--gray-soft); cursor: default; }
   .case-link.muted:hover span.label { border-color: transparent; }
   .case-link.muted:hover .arrow { transform: none; }
+
   .work-visual {
     position: relative;
     overflow: hidden;
@@ -94,6 +103,7 @@
   .work-item a.block-link:hover ~ .work-visual video,
   .work-visual:hover image-slot,
   .work-visual:hover video { transform: scale(1.012); }
+
   @media (max-width: 900px) {
     .work-item { grid-template-columns: 1fr; gap: 28px; }
     .work-copy { order: 1; }
@@ -103,6 +113,12 @@
     .work-desc, .work-copy { max-width: none; }
     .case-link { margin-top: 28px; }
   }
+
+  /* ===================================================================
+     Project covers — each frames the real case-study work on a tint
+     pulled from that project's own brand, so the work list reads as a
+     cohesive set with deliberate light/dark rhythm.
+     =================================================================== */
   .cover {
     position: relative;
     height: 440px;
@@ -111,6 +127,7 @@
   }
   .work-item a.block-link:hover ~ .work-visual .cover,
   .work-visual:hover .cover { transform: scale(1.012); }
+
   .cover-fill {
     position: absolute;
     inset: 0;
@@ -119,6 +136,7 @@
     object-fit: cover;
     display: block;
   }
+  /* shared finish: a hair of inner edge + soft top light, tuned per tint */
   .cover::after {
     content: "";
     position: absolute;
@@ -127,12 +145,20 @@
     box-shadow: inset 0 0 0 1px rgba(20,24,33,0.05);
     background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(0,0,0,0.045) 82%);
   }
+
+  /* ---- tints ---- */
   .cover-sol      { background: #efece4; }
   .cover-crisis   { background: #fdf6e3; }
   .cover-cyber    { background: #e7eef9; }
   .cover-endpoint { background: #f4f5f7; }
+
+  /* ---- SOL: montage of pages from one block system ---- */
   .cover-sol .cover-fill { object-position: 50% 40%; transform: scale(1.04); }
+
+  /* ---- Crisis: the life-graph visualization ---- */
   .cover-crisis .cover-fill { object-position: 56% 60%; transform: scale(1.06); }
+
+  /* ---- Cybersecurity: relaunched site in a browser frame ---- */
   .cover-cyber .brow {
     position: absolute;
     left: 9%; top: 21%; width: 88%;
@@ -162,6 +188,8 @@
     background-size: cover;
     background-position: top left;
   }
+
+  /* ---- Endpoint: the collage of screens produced from the UI guidelines ---- */
   .cover-endpoint .ep-scene {
     position: absolute;
     left: 0; top: 50%;
@@ -177,6 +205,7 @@
     border-radius: 5px;
     box-shadow: 0 10px 40px rgba(106,116,137,0.20);
   }
+
   @media (max-width: 900px) {
     .cover { height: clamp(220px, 56vw, 420px); }
   }
@@ -211,12 +240,12 @@
         <h3>Modular &amp; Block-Based Website Redesign</h3>
         <p class="work-meta" style="font-weight: 400">SOL Edu &amp; Migration / 2025&ndash;Present
 Role: Designer</p>
-        <p class="work-desc" style="color: rgb(33, 33, 33); line-height: 1.5; font-weight: 400">Proposed and led a shift from page-by-page rebuilding to a modular, block-based system for an education and migration agency&rsquo;s WordPress site. By defining reusable components and assembling around 80% of pages independently, the internal team gained the ability to manage content without ongoing developer support.<br><br>The new system cut development costs by 40% and is now being extended to Chinese and Thai markets.</p>
+        <p class="work-desc" style="color: rgb(33, 33, 33); line-height: 1.5; font-weight: 400">Proposed and led a shift from page-by-page rebuilding to a modular, block-based system for an education and migration agency's WordPress site. By defining reusable components and assembling around 80% of pages independently, the internal team gained the ability to manage content without ongoing developer support.<br><br>The new system cut development costs by 40% and is now being extended to Chinese and Thai markets.</p>
         <a class="case-link" href="Case Study - Modular Redesign.html"><span class="label">Full case study</span><span class="arrow">&rarr;</span></a>
       </div>
       <div class="work-visual">
         <div class="cover cover-sol">
-          <img class="cover-fill" src="images/modular/sol-final.png" alt="Dozens of redesigned SOL Edu &amp; Migration pages assembled from one modular block system">
+          <img class="cover-fill" src="images/modular/sol-final.png" alt="Dozens of redesigned SOL Edu & Migration pages assembled from one modular block system">
         </div>
       </div>
     </article>
@@ -226,7 +255,7 @@ Role: Designer</p>
         <h3>Visualizing Uncertainty: The Whole-life Crisis</h3>
         <p class="work-meta">Master&rsquo;s Project / 2025
 Role: Designer</p>
-        <p class="work-desc" style="line-height: 1.5; color: rgb(33, 33, 33)">Reframed how people understand life crisis through qualitative research and interviews across age groups, finding that uncertainty isn&rsquo;t tied to a specific stage, but continuous.<br><br>Translated that insight into an emotional UX system: a graph-based visualization capturing feelings, certainty, and turning points over time &mdash; designed to make personal experience feel visible and shared.</p>
+        <p class="work-desc" style="line-height: 1.5; color: rgb(33, 33, 33)">Reframed how people understand life crisis through qualitative research and interviews across age groups,  finding that uncertainty isn't tied to a specific stage, but continuous.<br><br>Translated that insight into an emotional UX system: a graph-based visualization capturing feelings, certainty, and turning points over time &mdash; designed to make personal experience feel visible and shared.</p>
         <a class="case-link" href="Case Study - Whole-life Crisis.html"><span class="label">Full case study</span><span class="arrow">&rarr;</span></a>
       </div>
       <div class="work-visual">
@@ -254,12 +283,12 @@ Role: Creative Designer</p>
         <h3>Website Redesign for Cybersecurity Company</h3>
         <p class="work-meta">SecureAge Technology / 2020&ndash;2021
 Role: Creative Designer / Project Manager</p>
-        <p class="work-desc" style="line-height: 1.5; color: rgb(33, 33, 33)">Led the end-to-end redesign of a cybersecurity company&rsquo;s website as part of its global expansion strategy. I hired and directed UX and development agencies, aligned cross-functional stakeholders, and helped transform fragmented B2B and B2C experiences into a unified platform.<br><br>The redesign established a scalable foundation for growth and contributed to a 109% increase in web traffic and a 54% increase in content engagement following launch.</p>
+        <p class="work-desc" style="line-height: 1.5; color: rgb(33, 33, 33)">Led the end-to-end redesign of a cybersecurity company's website as part of its global expansion strategy. I hired and directed UX and development agencies, aligned cross-functional stakeholders, and helped transform fragmented B2B and B2C experiences into a unified platform.<br><br>The redesign established a scalable foundation for growth and contributed to a 109% increase in web traffic and a 54% increase in content engagement following launch.</p>
         <a class="case-link" href="Case Study - Cybersecurity Redesign.html"><span class="label">Full case study</span><span class="arrow">&rarr;</span></a>
       </div>
       <div class="work-visual">
         <div class="cover cover-cyber">
-          <img class="cover-fill" src="images/cy/cover.png" alt="The relaunched SecureAge website">
+          <img class="cover-fill" src="images/cy/cover.png" alt="The relaunched SecureAge website — Enterprise, SecureAPlus, and product pages from the redesign">
         </div>
       </div>
     </article>
