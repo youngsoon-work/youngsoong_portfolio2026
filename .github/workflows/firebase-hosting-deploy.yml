@@ -1,6 +1,8 @@
 name: Deploy to Firebase Hosting on merge
 
 # Deploys the portfolio to Firebase Hosting every time changes land on main.
+# Uses the Firebase CLI directly with a service-account key (the same path
+# verified to work locally) rather than a third-party action.
 on:
   push:
     branches:
@@ -13,10 +15,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Deploy to Firebase Hosting
-        uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-          projectId: portfolio2026-5cf9e
-          channelId: live
+          node-version: 20
+
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: Write service account key
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: printf '%s' "$FIREBASE_SERVICE_ACCOUNT" > "${{ runner.temp }}/sa-key.json"
+
+      - name: Deploy to Firebase Hosting
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/sa-key.json
+        run: firebase deploy --only hosting --project portfolio2026-5cf9e --non-interactive
