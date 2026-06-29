@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="uploads/favicon.png">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Interactive Demo for Cybersecurity Product — Youngsoon Seo</title>
 <link rel="stylesheet" href="styles.css">
@@ -25,9 +27,12 @@
   </div>
 
   <section class="wrap cs-hero" data-reveal data-screen-label="Interactive Demo">
-    <p class="cs-eyebrow">SecureAge Technology &middot; 2023</p>
     <h1>Interactive demo for a cybersecurity product</h1>
   </section>
+
+  <figure class="cs-figure wide cs-hero-figure" data-reveal>
+    <video src="images/demo/demo-final.mp4" autoplay loop muted playsinline style="height:460px;object-fit:cover;object-position:center;background:#fff"></video>
+  </figure>
 
   <section class="wrap" data-reveal>
     <dl class="cs-facts">
@@ -39,19 +44,14 @@
     <div class="cs-intro">
       <div>
         <h2>About the project</h2>
-        <p>Security Suite is the flagship product of SecureAge, a cybersecurity company focused on data protection. I led a project to create an interactive product demo using the real product interface, enabling users to explore workflows directly on the website and better understand how the product works.</p>
+        <p>Security Suite is the flagship product of SecureAge, a cybersecurity company focused on data protection. This project is an interactive product demo built on the real product interface, letting users explore key workflows directly on the website and understand how the product works, without needing a sales-led walkthrough.</p>
       </div>
       <div>
         <h2>My role</h2>
-        <p>As the product designer, I led the project end-to-end &mdash; from research and concept development to interaction design, demo production, and website implementation. I collaborated closely with C-level executives, marketing, and sales teams to define what to showcase and how to present it.</p>
+        <p>This project started from something I noticed rather than a brief I was handed: our product was powerful but hard to grasp without a sales-led walkthrough. I led it end-to-end, from research and concept through to implementation, working with C-level, marketing, and sales to define which workflows to show and how to frame them.</p>
       </div>
     </div>
   </section>
-
-  <figure class="cs-figure wide" data-reveal>
-    <video src="images/demo/demo-final.mp4" autoplay loop muted playsinline style="width:100%; display:block; border-radius:6px; background:#fff"></video>
-    <figcaption>The demo is built on the real product interface &mdash; here, files encrypted in place.</figcaption>
-  </figure>
 
   <section class="cs-section" data-reveal>
     <h2>The problem</h2>
@@ -74,16 +74,14 @@
 
   <section class="cs-section" data-reveal>
     <h2>Design strategy</h2>
-    <p>I explored multiple ways of presenting the product &mdash; from static visuals to guided tours and demo tools &mdash; and proposed a lightweight, interactive approach that could be executed with existing resources. The strategy was shaped by the following decisions:</p>
+    <p>I explored several ways to present the product, from static visuals to guided tours, and landed on a lightweight, interactive approach I could execute with existing resources. A few decisions shaped it:</p>
     <figure class="cs-figure" data-reveal style="width:min(720px, 100% - 2 * var(--cs-gut)); margin-top:36px">
       <img src="images/demo/demo-strategy.png" alt="Proactive encryption shown directly in the file explorer" style="width:100%; display:block; border-radius:6px">
     </figure>
     <ol class="cs-steps">
-      <li><span class="num"></span><div><p class="st-title">Focused presentation</p><p class="st-desc">Rather than showing the entire interface, the demo highlights a few key interactions. This reduces cognitive load and keeps the experience clear and purposeful.</p></div></li>
-      <li><span class="num"></span><div><p class="st-title">Leverage available resources</p><p class="st-desc">Instead of relying on external tools or agencies, I collaborated with a developer and produced the demo myself, enabling faster iteration and full control over the experience.</p></div></li>
-      <li><span class="num"></span><div><p class="st-title">Use motion to communicate behavior</p><p class="st-desc">Key product actions, such as encryption and file changes, were captured as short motion-based visuals to clearly demonstrate how the system works in real time.</p></div></li>
-      <li><span class="num"></span><div><p class="st-title">Interactive experience</p><p class="st-desc">The demo is designed for step-by-step interaction, allowing users to actively engage rather than passively watch &mdash; improving both engagement and understanding.</p></div></li>
-      <li><span class="num"></span><div><p class="st-title">Scenario-based storytelling</p><p class="st-desc">The experience is framed around familiar workflows &mdash; such as handling emails or sharing files &mdash; so users can easily relate the product to their daily tasks.</p></div></li>
+      <li><span class="num"></span><div><p class="st-title">Focused, scenario-based</p><p class="st-desc">Rather than showing the entire interface, I focused on a few key interactions and framed them around familiar workflows like handling emails or sharing files, so users could relate the product to their daily tasks.</p></div></li>
+      <li><span class="num"></span><div><p class="st-title">Motion + interaction</p><p class="st-desc">Key actions like encryption were shown through motion, and the demo was built for step-by-step interaction so users could actively engage rather than passively watch.</p></div></li>
+      <li><span class="num"></span><div><p class="st-title">Leverage available resources</p><p class="st-desc">Instead of relying on external tools or agencies, I produced the demo myself with a developer, which allowed faster iteration and full control over the experience.</p></div></li>
     </ol>
   </section>
 
@@ -93,14 +91,15 @@
       <li><span class="num"></span><div><p class="st-title">Structuring the demo</p><p class="st-desc">I worked with the COO to identify the most important features from a sales perspective. We focused on three key capabilities &mdash; proactive encryption, invisible encryption, and secure collaboration &mdash; and translated them into a self-guided experience.</p></div></li>
       <li><span class="num"></span><div><p class="st-title">Storyboarding</p><p class="st-desc">I created quick sketches and refined them into detailed storyboards using real product screenshots. This allowed stakeholders to align early and iterate efficiently through feedback.</p><img src="images/demo/demo-storyboarding.png" alt="Detailed storyboards built from real product screenshots" style="width:100%; max-width:660px; display:block; border-radius:6px; margin-top:18px"></div></li>
       <li><span class="num"></span><div><p class="st-title">Recording &amp; editing</p><p class="st-desc">I collaborated with a sales engineer to capture product workflows and provided guidelines for visual consistency. The recordings were edited into short, focused segments aligned with the intended user flow.</p><img src="images/demo/demo-recording.png" alt="Recorded product workflows edited into short, focused segments" style="width:100%; max-width:660px; display:block; border-radius:6px; margin-top:18px"></div></li>
-      <li><span class="num"></span><div><p class="st-title">Implementation</p><p class="st-desc">I worked with marketing and a developer to build a dedicated demo page. The experience guides users through one feature at a time with scroll-based progression and click interaction. On mobile, the layout was adapted with simplified navigation to maintain readability.</p><img src="images/demo/demo-implementation.png" alt="Before and after of the site header, with a new Watch demo entry point" style="width:100%; max-width:660px; display:block; border-radius:6px; margin-top:18px"></div></li>
+      <li><span class="num"></span><div><p class="st-title">Implementation</p><p class="st-desc">I worked with marketing and a developer to build a dedicated demo page. The experience guides users through one feature at a time with scroll-based progression and click interaction.</p><img src="images/demo/demo-implementation.png" alt="Before and after of the site header, with a new Watch demo entry point" style="width:100%; max-width:660px; display:block; border-radius:6px; margin-top:18px"></div></li>
+      <li><span class="num"></span><div><p class="st-title">Mobile experience</p><p class="st-desc">Due to the constraints of screen size on mobile, a different approach was needed from the desktop version. To improve readability, I moved the text content below the screen and designed a swipe-based navigation to move between items, built together with the developer.</p><img src="uploads/demo_mobile.png" alt="Desktop and mobile comparison of the interactive demo experience" style="width:100%; max-width:660px; display:block; border-radius:6px; margin-top:18px"></div></li>
     </ol>
   </section>
 
   <section class="cs-section" data-reveal>
     <h2>Impact</h2>
-    <p>The interactive demo shifted the product experience from a sales-led explanation to a self-guided journey, allowing users to understand key workflows before contacting the sales team. This helps users build confidence earlier in their decision-making process, while also enabling more focused and efficient sales conversations.</p>
-    <p>Overall, it introduced a more experience-driven way of presenting the product online, moving beyond static content.</p>
+    <p>Before this, the company had no way of showing its main product in action online. The experience was explained through text and static visuals, leaving a gap between interest and real understanding. The demo changed that: for the first time, potential customers could explore the actual product interface on their own and understand how it works before ever talking to sales.</p>
+    <p>It reframed the product experience from static explanation into self-directed exploration, a more honest and tangible way to present a complex security product online.</p>
   </section>
 
   <figure class="cs-figure wide" data-reveal>
@@ -125,7 +124,7 @@
       <span class="copy">&copy; 2026 Youngsoon Seo</span>
       <nav class="footer-links">
         <a href="Home.html">Home</a>
-        <a href="uploads/Youngsoon-v3.0.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="uploads/Youngsoon-resume.pdf" target="_blank" rel="noopener">Resume</a>
         <a href="https://www.linkedin.com/in/youngsoon-seo/" target="_blank" rel="noopener">LinkedIn</a>
       </nav>
     </div>
