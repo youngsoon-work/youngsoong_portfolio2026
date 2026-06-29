@@ -55,6 +55,8 @@
 
 .cs-intro {
   margin-top: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--line-soft);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 56px;
