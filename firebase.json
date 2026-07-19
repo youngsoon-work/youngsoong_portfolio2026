@@ -12,6 +12,10 @@
       {
         "source": "/",
         "destination": "/Home.html"
+      },
+      {
+        "source": "/digital",
+        "destination": "/digital/Home.html"
       }
     ]
   }
